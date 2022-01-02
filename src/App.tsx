@@ -3,14 +3,15 @@ import Chat from "./view/pages/Chat/Chat"
 import Optin from "./view/pages/Optin/Optin"
 
 function AppRoutes() {
-
   let routes = useRoutes([
-    { path: '/', element: <Optin /> },
-    { path: '/chat', element: <Chat /> },
+    { path: "/", element: <Optin /> },
+    { path: "/chat", element: <Chat /> },
   ])
 
-  return routes;
+  return routes
 }
+
+
 
 function App () {
   return (
