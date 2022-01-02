@@ -1,10 +1,30 @@
-import './App.css';
-import Optin from './view/pages/Optin/Optin';
+import { BrowserRouter as Router, useRoutes } from "react-router-dom"
+import VideoChatContainer from "./view/containers/VideoChatContainer/VideoChatContainer"
+import Chat from "./view/pages/Chat/Chat"
+import Optin from "./view/pages/Optin/Optin"
+
+function AppRoutes() {
+  let routes = useRoutes([
+    { path: "/", element: <Optin /> },
+    { path: "/chat", element: <Chat /> },
+  ])
+
+  return routes
+}
 
 function App() {
   return (
-    <Optin />
-  );
+    <>
+      <div className='aspect-w-16 aspect-h-9'>
+        <iframe
+          src='https://www.youtube.com/embed/dQw4w9WgXcQ'
+          frameBorder='0'
+          allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+          allowFullScreen
+        ></iframe>
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App
