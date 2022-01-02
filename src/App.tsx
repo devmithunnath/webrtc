@@ -1,10 +1,23 @@
-import './App.css';
-import Optin from './view/pages/Optin/Optin';
+import { BrowserRouter as Router, useRoutes } from "react-router-dom"
+import Chat from "./view/pages/Chat/Chat"
+import Optin from "./view/pages/Optin/Optin"
 
-function App() {
-  return (
-    <Optin />
-  );
+function AppRoutes() {
+
+  let routes = useRoutes([
+    { path: '/', element: <Optin /> },
+    { path: '/chat', element: <Chat /> },
+  ])
+
+  return routes;
 }
 
-export default App;
+function App () {
+  return (
+    <Router>
+      <AppRoutes />
+    </Router>
+  )
+}
+
+export default App
