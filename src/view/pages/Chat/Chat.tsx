@@ -24,7 +24,7 @@ const Chat = () => {
   function connect() {
     console.log("Starting to connect")
     setConnectionProgress(true)
-    // establishConnection(true)
+    setTimeout(() => establishConnection(true), 5000)
   }
 
   if (!connectionInProgress && !connectionEstablished) {
