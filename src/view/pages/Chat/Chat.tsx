@@ -1,5 +1,7 @@
 import { Button, CssBaseline, Grid, makeStyles } from "@material-ui/core"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useDispatch } from "react-redux"
+import { signalServer } from "../../../store/signals"
 import TextChatContainer from "../../containers/TextChatContainer/TextChatContainer"
 import VideoChatContainer from "../../containers/VideoChatContainer/VideoChatContainer"
 
@@ -20,6 +22,13 @@ const Chat = () => {
   const classes = useStyles()
   const [connectionInProgress, setConnectionProgress] = useState(false)
   const [connectionEstablished, establishConnection] = useState(false)
+
+  const dispatch = useDispatch() // use this hook to get the actions from the redux store
+
+  useEffect(() => {
+    dispatch(signalServer)
+  }, []) // use this hook to perform side effects - in this case, dispatch the action perform things when the components loads
+  
 
   function connect() {
     console.log("Starting to connect")

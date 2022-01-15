@@ -1,31 +1,16 @@
-import Action from "./../models/Action"
+import { createSlice } from "@reduxjs/toolkit"
 
-// Action Types
-const SIGNAL_SERVER = "signalServer"
-
-// Action Creators
-export const signalServer = (description: any) => {
-  let action: Action = {
-    type: SIGNAL_SERVER,
-    payload: {
-      description,
+const slice = createSlice({
+  name: "signals",
+  initialState: [],
+  reducers: {
+    signalServer: (signals, action) => {
+      signals.push()
     },
-  }
-  return action
-}
+  },
+})
 
-// Reducers
-export default function reducer(state: any = [], action: Action) {
-  switch (action.type) {
-    case SIGNAL_SERVER:
-      return [
-        ...state,
-        {
-          signallingInProgress: true,
-        },
-      ]
+export const { signalServer } = slice.actions
+export default slice.reducer
 
-    default:
-      return state
-  }
-}
+// create as many as selectors (functions) to return the data you need
