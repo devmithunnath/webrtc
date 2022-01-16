@@ -1,7 +1,7 @@
 import { Button, CssBaseline, Grid, makeStyles } from "@material-ui/core"
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
-import { signalServer } from "../../../store/signals"
+import { signalServer } from "../../../store/slices/signal"
 import TextChatContainer from "../../containers/TextChatContainer/TextChatContainer"
 import VideoChatContainer from "../../containers/VideoChatContainer/VideoChatContainer"
 

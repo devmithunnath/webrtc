@@ -2,11 +2,9 @@ import { createSlice } from "@reduxjs/toolkit"
 
 const slice = createSlice({
   name: "signals",
-  initialState: [],
+  initialState: {},
   reducers: {
-    signalServer: (signals, action) => {
-      signals.push()
-    },
+    signalServer: (signals, action) => {},
   },
 })
 

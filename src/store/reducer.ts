@@ -1,7 +1,10 @@
 import { combineReducers } from "redux"
-import entitiesReducer from './entities'
+import signalReducer from "./slices/signal"
+import signupReducer from "./slices/signup"
+import webrtcReducer from "./slices/webrtc"
 
 export default combineReducers({
-    entities: entitiesReducer,
-    //more slices
+  signalReducer,
+  signupReducer,
+  webrtcReducer,
 })
