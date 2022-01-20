@@ -28,7 +28,6 @@ const Chat = () => {
   useEffect(() => {
     dispatch(signalServer)
   }, []) // use this hook to perform side effects - in this case, dispatch the action perform things when the components loads
-  
 
   function connect() {
     console.log("Starting to connect")
